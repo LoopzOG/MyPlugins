@@ -618,6 +618,7 @@ public class SkillTreeServiceImpl implements SkillTreeService {
         resetAll(uuid);
         resetLevelProgression(uuid);
         resetSkillPointBank(uuid);
+        resetMilestones(uuid, null);
     }
 
     public void resetSkillPointBank(UUID uuid) {
