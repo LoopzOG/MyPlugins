@@ -1,0 +1,106 @@
+gui:
+  main-title: "&8Fantasy Skill Trees"
+  tree-title-format: "&8%tree% Skill Tree"
+  milestone-title: "&8Level Milestones"
+  milestone-editor-title: "&8Edit %milestone%"
+  main-size: 27
+  tree-size: 54
+  milestone-size: 54
+  progress-info-slot: 4
+  milestone-button-slot: 24
+  guide-button-slot: 22
+  back-button-slot: 49
+  filler-material: STAINED_GLASS_PANE
+  filler-data: 15
+  branch-locked-lore:
+    - "&7Spend points to unlock nodes"
+  unlocked-lore-line: "&aUnlocked"
+  unlockable-lore-line: "&eClick to unlock"
+  locked-lore-line: "&cLocked"
+  claimable-lore-line: "&eClick to claim"
+  claimed-lore-line: "&aClaimed"
+  ip-locked-lore-line: "&cAlready claimed on this IP"
+  level-bar-filled: "&a|"
+  level-bar-empty: "&7|"
+  level-bar-length: 20
+
+messages:
+  xp-gain: "&a+%xp% XP &7(%reason%)"
+  level-up: "&6Level Up! &7You reached &fLevel %level%&7 and earned &f%points% Skill Point&7."
+  milestone-claim: "&aClaimed milestone reward: &f%milestone%"
+  milestone-locked: "&cYou have not reached that milestone yet."
+  milestone-claimed: "&eYou already claimed that milestone."
+  milestone-ip-locked: "&cThat milestone has already been claimed on your IP for this map."
+  milestone-no-rewards: "&cThis milestone has no configured rewards."
+
+level-system:
+  base-xp-per-level: 50
+  skill-points-per-level: 1
+  map-id: "default"
+  sources:
+    realm-levels:
+      xp: 15
+      every-levels: 15
+    outpost-capture:
+      xp: 10
+    koth-capture:
+      xp: 50
+    mob-kills:
+      xp: 0.5
+      per-kills: 1000
+    coinflip-win:
+      xp: 1
+    jackpot-win:
+      xp: 1
+
+tree-defaults:
+  auto-sync-on-startup: true
+
+skill-point-item:
+  enabled: true
+  material: NETHER_STAR
+  display-name: "&bSkill Point Token"
+  lore:
+    - "&7Right-click to claim"
+    - "&f%points% &7skill point(s)."
+  redeem-message: "&aYou redeemed &f%points%&a skill point(s)."
+  inventory-full-message: "&cYour inventory is full."
+  hidden-lore-prefix: "FST_SKILL_POINT:"
+  default-points: 1
+
+placeholders:
+  mob-xp-listener-enabled: true
+  boss-damage-listener-enabled: true
+  boss-name-contains:
+    - "boss"
+    - "warden"
+    - "titan"
+
+integrations:
+  conquest:
+    enabled: true
+    plugin-name: "Conquest"
+  envoy:
+    enabled: true
+    plugin-name: "Envoy"
+  jackpot:
+    enabled: true
+    plugin-name: "Jackpot"
+  coinflip:
+    enabled: true
+    plugin-name: "CoinFlip"
+  revealer:
+    enabled: true
+    plugin-name: "Revealer"
+  outpost:
+    enabled: true
+    plugin-name: "Outpost"
+  keyharvester:
+    enabled: true
+    plugin-name: "KeyHarvester"
+  boss:
+    enabled: true
+    plugin-name: "Bosses"
+  mobxp:
+    enabled: true
+    plugin-name: "MobXP"

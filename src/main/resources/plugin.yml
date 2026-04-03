@@ -1,0 +1,47 @@
+name: FantasySkillTrees
+version: 1.0.3
+main: com.fantasycloud.fantasyskilltrees.FantasySkillTreesPlugin
+author: FantasyCloud
+description: Baseline config-driven skill tree system for FantasyCloud.
+
+commands:
+  skilltree:
+    description: Root command for FantasySkillTrees.
+    usage: /skilltree <open|milestones|points|removepoints|levels|xp|sourcexp|resetmilestones|autocompletemilestones|item|unlockvault|unlockallvaults|openallvaults|unlock|reset|reload|syncdefaults>
+    aliases: [skills, stree]
+  milestones:
+    description: Opens the milestone menu.
+    usage: /milestones [edit]
+    aliases: [milestone]
+  openallvaults:
+    description: Unlocks all legacy vault items and resets all player progression.
+    usage: /openallvaults
+  unlockallvaults:
+    description: Unlocks all legacy vault items and resets all player progression.
+    usage: /unlockallvaults
+
+permissions:
+  fantasyskilltrees.command.open:
+    default: true
+  fantasyskilltrees.command.milestones:
+    default: true
+  fantasyskilltrees.command.milestones.edit:
+    default: op
+  fantasyskilltrees.command.milestones.admin:
+    default: op
+  fantasyskilltrees.command.points:
+    default: op
+  fantasyskilltrees.command.levels:
+    default: op
+  fantasyskilltrees.command.xp:
+    default: op
+  fantasyskilltrees.command.item:
+    default: op
+  fantasyskilltrees.command.unlock:
+    default: op
+  fantasyskilltrees.command.reset:
+    default: op
+  fantasyskilltrees.command.reload:
+    default: op
+  fantasyskilltrees.command.syncdefaults:
+    default: op

@@ -1,0 +1,172 @@
+id: luck
+display-name: "&aLuck"
+description:
+  - "&7Improves chance-based systems"
+  - "&7and economy mechanics."
+icon: EMERALD
+menu-slot: 12
+
+nodes:
+  jackpot_tax_1:
+    display-name: "&aLucky Cut I"
+    description:
+      - "&7Slightly reduce Jackpot tax."
+    icon: GOLD_NUGGET
+    cost: 1
+    slot: 10
+    prerequisites: []
+    effects:
+      - type: JACKPOT_TAX_REDUCTION
+        value: 0.03
+        operation: PERCENT_REDUCTION
+
+  jackpot_tax_2:
+    display-name: "&aLucky Cut II"
+    description:
+      - "&7Moderately reduce Jackpot tax."
+    icon: GOLD_NUGGET
+    cost: 2
+    slot: 11
+    prerequisites:
+      - jackpot_tax_1
+    effects:
+      - type: JACKPOT_TAX_REDUCTION
+        value: 0.05
+        operation: PERCENT_REDUCTION
+
+  jackpot_tax_3:
+    display-name: "&aLucky Cut III"
+    description:
+      - "&7Greatly reduce Jackpot tax."
+    icon: GOLD_NUGGET
+    cost: 3
+    slot: 12
+    prerequisites:
+      - jackpot_tax_2
+    effects:
+      - type: JACKPOT_TAX_REDUCTION
+        value: 0.07
+        operation: PERCENT_REDUCTION
+
+  cf_tax_1:
+    display-name: "&aHouse Edge I"
+    description:
+      - "&7Slightly reduce CoinFlip tax."
+    icon: GOLD_INGOT
+    cost: 1
+    slot: 14
+    prerequisites: []
+    effects:
+      - type: CF_TAX_REDUCTION
+        value: 0.04
+        operation: PERCENT_REDUCTION
+
+  cf_tax_2:
+    display-name: "&aHouse Edge II"
+    description:
+      - "&7Moderately reduce CoinFlip tax."
+    icon: GOLD_INGOT
+    cost: 2
+    slot: 15
+    prerequisites:
+      - cf_tax_1
+    effects:
+      - type: CF_TAX_REDUCTION
+        value: 0.06
+        operation: PERCENT_REDUCTION
+
+  cf_tax_3:
+    display-name: "&aHouse Edge III"
+    description:
+      - "&7Greatly reduce CoinFlip tax."
+    icon: GOLD_INGOT
+    cost: 3
+    slot: 16
+    prerequisites:
+      - cf_tax_2
+    effects:
+      - type: CF_TAX_REDUCTION
+        value: 0.08
+        operation: PERCENT_REDUCTION
+
+  gem_save_1:
+    display-name: "&aGem Saver I"
+    description:
+      - "&7Slightly increase gem save chance."
+    icon: DIAMOND
+    cost: 2
+    slot: 28
+    prerequisites: []
+    effects:
+      - type: GEM_SAVE_CHANCE
+        value: 0.05
+        operation: PROC_CHANCE
+
+  gem_save_2:
+    display-name: "&aGem Saver II"
+    description:
+      - "&7Moderately increase gem save chance."
+    icon: DIAMOND
+    cost: 3
+    slot: 29
+    prerequisites:
+      - gem_save_1
+    effects:
+      - type: GEM_SAVE_CHANCE
+        value: 0.08
+        operation: PROC_CHANCE
+
+  gem_save_3:
+    display-name: "&aGem Saver III"
+    description:
+      - "&7Greatly increase gem save chance."
+    icon: DIAMOND
+    cost: 4
+    slot: 30
+    prerequisites:
+      - gem_save_2
+    effects:
+      - type: GEM_SAVE_CHANCE
+        value: 0.12
+        operation: PROC_CHANCE
+
+  outpost_speed_1:
+    display-name: "&aSwift Capture I"
+    description:
+      - "&7Slightly increase outpost capture speed."
+    icon: WATCH
+    cost: 2
+    slot: 32
+    prerequisites: []
+    effects:
+      - type: OUTPOST_CAPTURE_SPEED
+        value: 0.10
+        operation: MULTIPLIER
+
+  outpost_speed_2:
+    display-name: "&aSwift Capture II"
+    description:
+      - "&7Moderately increase outpost capture speed."
+    icon: WATCH
+    cost: 3
+    slot: 33
+    prerequisites:
+      - outpost_speed_1
+    effects:
+      - type: OUTPOST_CAPTURE_SPEED
+        value: 0.15
+        operation: MULTIPLIER
+
+  outpost_speed_3:
+    display-name: "&aSwift Capture III"
+    description:
+      - "&7Greatly increase outpost capture speed."
+    icon: WATCH
+    cost: 4
+    slot: 34
+    prerequisites:
+      - outpost_speed_2
+    effects:
+      - type: OUTPOST_CAPTURE_SPEED
+        value: 0.20
+        operation: MULTIPLIER

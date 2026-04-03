@@ -1,0 +1,131 @@
+id: looting
+display-name: "&6Looting"
+description:
+  - "&7Improves loot-related gameplay"
+  - "&7and activity speed bonuses."
+icon: CHEST
+menu-slot: 10
+
+nodes:
+  reveal_speed_1:
+    display-name: "&eQuick Hands I"
+    description:
+      - "&7Slightly increase loot reveal speed."
+    icon: FEATHER
+    cost: 1
+    slot: 10
+    prerequisites: []
+    effects:
+      - type: LOOT_REVEAL_SPEED
+        value: 0.10
+        operation: ADDITIVE
+
+  reveal_speed_2:
+    display-name: "&eQuick Hands II"
+    description:
+      - "&7Moderately increase loot reveal speed."
+    icon: FEATHER
+    cost: 2
+    slot: 11
+    prerequisites:
+      - reveal_speed_1
+    effects:
+      - type: LOOT_REVEAL_SPEED
+        value: 0.15
+        operation: ADDITIVE
+
+  reveal_speed_3:
+    display-name: "&eQuick Hands III"
+    description:
+      - "&7Greatly increase loot reveal speed."
+    icon: FEATHER
+    cost: 3
+    slot: 12
+    prerequisites:
+      - reveal_speed_2
+    effects:
+      - type: LOOT_REVEAL_SPEED
+        value: 0.20
+        operation: ADDITIVE
+
+  realm_expert_1:
+    display-name: "&eRealm Expert I"
+    description:
+      - "&7Slightly increase higher realm loot chance."
+    icon: EYE_OF_ENDER
+    cost: 2
+    slot: 14
+    prerequisites: []
+    effects:
+      - type: REALM_HIGHER_LOOT_CHANCE
+        value: 0.03
+        operation: PROC_CHANCE
+
+  realm_expert_2:
+    display-name: "&eRealm Expert II"
+    description:
+      - "&7Moderately increase higher realm loot chance."
+    icon: EYE_OF_ENDER
+    cost: 3
+    slot: 15
+    prerequisites:
+      - realm_expert_1
+    effects:
+      - type: REALM_HIGHER_LOOT_CHANCE
+        value: 0.05
+        operation: PROC_CHANCE
+
+  realm_expert_3:
+    display-name: "&eRealm Expert III"
+    description:
+      - "&7Greatly increase higher realm loot chance."
+    icon: EYE_OF_ENDER
+    cost: 4
+    slot: 16
+    prerequisites:
+      - realm_expert_2
+    effects:
+      - type: REALM_HIGHER_LOOT_CHANCE
+        value: 0.08
+        operation: PROC_CHANCE
+
+  lms_survivor_1:
+    display-name: "&eLMS Survivor I"
+    description:
+      - "&7Slightly increase LMS multipliers."
+    icon: GOLDEN_APPLE
+    cost: 2
+    slot: 28
+    prerequisites: []
+    effects:
+      - type: LMS_MULTIPLIER
+        value: 0.03
+        operation: MULTIPLIER
+
+  lms_survivor_2:
+    display-name: "&eLMS Survivor II"
+    description:
+      - "&7Moderately increase LMS multipliers."
+    icon: GOLDEN_APPLE
+    cost: 3
+    slot: 29
+    prerequisites:
+      - lms_survivor_1
+    effects:
+      - type: LMS_MULTIPLIER
+        value: 0.05
+        operation: MULTIPLIER
+
+  lms_survivor_3:
+    display-name: "&eLMS Survivor III"
+    description:
+      - "&7Greatly increase LMS multipliers."
+    icon: GOLDEN_APPLE
+    cost: 4
+    slot: 30
+    prerequisites:
+      - lms_survivor_2
+    effects:
+      - type: LMS_MULTIPLIER
+        value: 0.08
+        operation: MULTIPLIER

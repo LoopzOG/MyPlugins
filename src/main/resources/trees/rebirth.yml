@@ -1,0 +1,36 @@
+id: rebirth
+display-name: "&dRebirth"
+description:
+  - "&7Endgame progression unlocked"
+  - "&7after mastering every other tree."
+icon: NETHER_STAR
+menu-slot: 16
+
+nodes:
+  vault_slot_1:
+    display-name: "&dLegacy Vault I"
+    description:
+      - "&7Unlock 1 preserved item slot."
+    icon: ENDER_CHEST
+    cost: 30
+    slot: 21
+    prerequisites:
+      - type: ALL_OTHER_TREES_FULLY_UNLOCKED
+    effects:
+      - type: REBIRTH_VAULT_SLOTS
+        value: 1
+        operation: ADDITIVE
+
+  vault_slot_2:
+    display-name: "&dLegacy Vault II"
+    description:
+      - "&7Unlock 2 total preserved item slots."
+    icon: ENDER_CHEST
+    cost: 60
+    slot: 23
+    prerequisites:
+      - vault_slot_1
+    effects:
+      - type: REBIRTH_VAULT_SLOTS
+        value: 1
+        operation: ADDITIVE

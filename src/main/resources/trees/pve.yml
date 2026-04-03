@@ -1,0 +1,175 @@
+id: pve
+display-name: "&cGrinding"
+description:
+  - "&7Improves mob, boss,"
+  - "&7and grinding performance."
+icon: DIAMOND_SWORD
+menu-slot: 14
+
+nodes:
+  key_drop_1:
+    display-name: "&cTreasure Hunter I"
+    description:
+      - "&7Slightly increase key drop chance."
+    icon: TRIPWIRE_HOOK
+    cost: 1
+    slot: 10
+    prerequisites: []
+    effects:
+      - type: KEY_DROP_CHANCE
+        value: 0.03
+        operation: PROC_CHANCE
+
+  key_drop_2:
+    display-name: "&cTreasure Hunter II"
+    description:
+      - "&7Moderately increase key drop chance."
+    icon: TRIPWIRE_HOOK
+    cost: 2
+    slot: 11
+    prerequisites:
+      - key_drop_1
+    effects:
+      - type: KEY_DROP_CHANCE
+        value: 0.05
+        operation: PROC_CHANCE
+
+  key_drop_3:
+    display-name: "&cTreasure Hunter III"
+    description:
+      - "&7Greatly increase key drop chance."
+    icon: TRIPWIRE_HOOK
+    cost: 3
+    slot: 12
+    prerequisites:
+      - key_drop_2
+    effects:
+      - type: KEY_DROP_CHANCE
+        value: 0.08
+        operation: PROC_CHANCE
+
+  boss_damage_1:
+    display-name: "&cBoss Slayer I"
+    description:
+      - "&7Slightly increase boss damage."
+    icon: BLAZE_ROD
+    cost: 2
+    slot: 14
+    prerequisites: []
+    effects:
+      - type: BOSS_DAMAGE_MULTIPLIER
+        value: 0.08
+        operation: MULTIPLIER
+
+  boss_damage_2:
+    display-name: "&cBoss Slayer II"
+    description:
+      - "&7Moderately increase boss damage."
+    icon: BLAZE_ROD
+    cost: 3
+    slot: 15
+    prerequisites:
+      - boss_damage_1
+    effects:
+      - type: BOSS_DAMAGE_MULTIPLIER
+        value: 0.12
+        operation: MULTIPLIER
+
+  boss_damage_3:
+    display-name: "&cBoss Slayer III"
+    description:
+      - "&7Greatly increase boss damage."
+    icon: BLAZE_ROD
+    cost: 4
+    slot: 16
+    prerequisites:
+      - boss_damage_2
+    effects:
+      - type: BOSS_DAMAGE_MULTIPLIER
+        value: 0.16
+        operation: MULTIPLIER
+
+  mob_xp_1:
+    display-name: "&cBattle Wisdom I"
+    description:
+      - "&7Slightly increase mob XP gain."
+    icon: EXP_BOTTLE
+    cost: 1
+    slot: 28
+    prerequisites: []
+    effects:
+      - type: MOB_XP_BOOST
+        value: 0.10
+        operation: ADDITIVE
+
+  mob_xp_2:
+    display-name: "&cBattle Wisdom II"
+    description:
+      - "&7Moderately increase mob XP gain."
+    icon: EXP_BOTTLE
+    cost: 2
+    slot: 29
+    prerequisites:
+      - mob_xp_1
+    effects:
+      - type: MOB_XP_BOOST
+        value: 0.15
+        operation: ADDITIVE
+
+  mob_xp_3:
+    display-name: "&cBattle Wisdom III"
+    description:
+      - "&7Greatly increase mob XP gain."
+    icon: EXP_BOTTLE
+    cost: 3
+    slot: 30
+    prerequisites:
+      - mob_xp_2
+    effects:
+      - type: MOB_XP_BOOST
+        value: 0.20
+        operation: ADDITIVE
+
+  royal_cache_1:
+    display-name: "&cRoyal Favor I"
+    description:
+      - "&7Slightly improve your chance"
+      - "&7to receive a Royal Cache from Conquest."
+    icon: CHEST
+    cost: 2
+    slot: 32
+    prerequisites: []
+    effects:
+      - type: ROYAL_CACHE_CHANCE
+        value: 0.01
+        operation: PROC_CHANCE
+
+  royal_cache_2:
+    display-name: "&cRoyal Favor II"
+    description:
+      - "&7Moderately improve your chance"
+      - "&7to receive a Royal Cache from Conquest."
+    icon: CHEST
+    cost: 3
+    slot: 33
+    prerequisites:
+      - royal_cache_1
+    effects:
+      - type: ROYAL_CACHE_CHANCE
+        value: 0.015
+        operation: PROC_CHANCE
+
+  royal_cache_3:
+    display-name: "&cRoyal Favor III"
+    description:
+      - "&7Greatly improve your chance"
+      - "&7to receive a Royal Cache from Conquest."
+    icon: CHEST
+    cost: 4
+    slot: 34
+    prerequisites:
+      - royal_cache_2
+    effects:
+      - type: ROYAL_CACHE_CHANCE
+        value: 0.02
+        operation: PROC_CHANCE
